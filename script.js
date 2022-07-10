@@ -1,9 +1,21 @@
 "USE strict";
 
-const category = 'toys';
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-console.log(`https://someurl.com/${category}/5`);
+const peronalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-const user = 'Ivan';
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько Вы его оцениваете?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько Вы его оцениваете?', '');
 
-alert(`Привет, ${user}`);
+peronalMovieDB.movies[a] = b;
+peronalMovieDB.movies[c] = d;
+
+console.log(peronalMovieDB);
